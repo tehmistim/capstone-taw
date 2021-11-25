@@ -1,0 +1,464 @@
+html, body { height: 100%; padding: 0; margin: 0; }
+
+header {
+    background-color: #000000;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+div { 
+  width: 50%; 
+  height: 50%; 
+  float: left; 
+}
+
+divL {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+}
+
+#div1 { 
+    background: #2f3947;
+    color: sienna;
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    align-items: center;
+}
+
+#div2 { 
+    background: rgb(255, 255, 255); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div3 { 
+    background: rgb(255, 255, 255); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Setup */
+    position: relative;
+  }
+  
+.child {
+    width: 50px;
+    height: 50px;
+   /* Center vertically and horizontally */
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
+}
+
+#div4 { 
+    background: rgb(255, 220, 167); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*    TO-DO CSS   */
+
+.container {
+    display: block;
+    width: 400px;
+    margin: 100px auto 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li * {
+    float: left;
+  }
+  li, h3 {
+    clear:both;
+    list-style:none;
+  }
+  input, button {
+    outline: none;
+  }
+  button {
+    background: none;
+    border: 0px;
+    color: #888;
+    font-size: 15px;
+    width: 60px;
+    margin: 10px 0 0;
+    font-family: Lato, sans-serif;
+    cursor: pointer;
+  }
+  button:hover {
+    color: #333;
+  }
+  /* Heading */
+  h3,
+  label[for='new-task'] {
+    color: #333;
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 2px solid #333;
+    padding: 30px 0 10px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  input[type="text"] {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
+  }
+  input[type="text"]:focus {
+    color: #333;
+  }
+  
+  /* New Task */
+  label[for='new-task'] {
+    display: block;
+    margin: 0 0 20px;
+  }
+  input#new-task {
+    float: left;
+    width: 318px;
+  }
+  p > button:hover {
+    color: #0FC57C;
+  }
+  
+  /* Task list */
+  li {
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+  }
+  li > input[type="checkbox"] {
+    margin: 0 10px;
+    position: relative;
+    top: 15px;
+  }
+  li > label {
+    font-size: 18px;
+    line-height: 40px;
+    width: 237px;
+    padding: 0 0 0 11px;
+  }
+  li >  input[type="text"] {
+    width: 226px;
+  }
+  li > .delete:hover {
+    color: #CF2323;
+  }
+  
+  /* Completed */
+  #completed-tasks label {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Edit Task */
+  ul li input[type=text] {
+    display:none;
+  }
+  
+  ul li.editMode input[type=text] {
+    display:block;
+  }
+  
+  ul li.editMode label {
+    display:none;
+  }
+
+  /* Button labeled buton ANIMATION */
+
+.boton {
+    width: 200px;
+    height: 50px;
+    align-items: center;    
+    text-align: center;
+    justify-content: center;
+    /* margin: 200px auto; */
+    display: flex;
+    position: relative;
+}
+
+.botontext {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.twist {
+    display: block;
+    height: 100%;
+    width: 25%;
+    position: relative;
+    float: left;
+    margin-left: -4px;
+}
+
+.twist:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fed5a9;
+    bottom: 100%;
+    position: absolute;
+    transform-origin: center bottom 0px; 
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 0, -1, -0.003, 
+                        0, 1, 0, 0, 
+                        0, 0, 0, 1);
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.twist:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    height: 100%;
+    background: #9f7f5e;
+    transform-origin: center top 0px;
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 1, 0, 0, 
+                        0, 0, 1, -0.003, 
+                        0, -50, 0, 1);
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.boton:hover .twist:before {
+    background: #fff;
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 1, 0, 0, 
+                        0, 0, 1, 0.003, 
+                        0, 50, 0, 1);
+}
+
+.boton:hover .twist:after {
+    background: #dedae1;
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 0, -1, 0.003, 
+                        0, 1, 0, 0, 
+                        0, 0, 0, 1);
+}
+
+.boton .twist:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.boton .twist:nth-of-type(1):before,
+.boton .twist:nth-of-type(1):after {
+    transition-delay: 0s;
+}
+
+.boton .twist:nth-of-type(2):before,
+.boton .twist:nth-of-type(2):after {
+    transition-delay: 0.1s;
+}
+
+.boton .twist:nth-of-type(3):before,
+.boton .twist:nth-of-type(3):after {
+    transition-delay: 0.2s;
+}
+
+.boton .twist:nth-of-type(4):before,
+.boton .twist:nth-of-type(4):after {
+    transition-delay: 0.3s;
+}
+
+.boton .botontext:nth-of-type(1) {
+    color: #3d3b40;
+    bottom: 100%;
+    transform-origin: center bottom 0px; 
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 0, -1, -0.003, 
+                        0, 1, 0, 0, 
+                        0, 0, 0, 1);
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.boton:hover .botontext:nth-of-type(1) {
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 1, 0, 0, 
+                        0, 0, 1, 0.003, 
+                        0, 50, 0, 1);
+}
+
+.boton .botontext:nth-of-type(2) {
+    color: #fff;
+    top: 100%;
+    transform-origin: center top 0px;
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 1, 0, 0, 
+                        0, 0, 1, -0.003, 
+                        0, -50, 0, 1);
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.boton:hover .botontext:nth-of-type(2) {
+    transform: matrix3d(1, 0, 0, 0, 
+                        0, 0, -1, 0.003, 
+                        0, 1, 0, 0, 
+                        0, 0, 0, 1);
+}
+
+/*MENU*/
+
+.square {
+    border: 1px solid #9f7f5e;
+    height: 26px;
+    width: 26px;
+    display: block;
+    margin: 40px auto;
+    transform: rotate(45deg);
+    overflow: hidden;
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+
+.square .burgerwrap {
+    height: 18px;
+    width: 21px;
+    transform: rotate(-45deg);
+    padding-left: 5px;
+    padding-top: 8px;
+
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.square:hover {
+    transform: rotate(135deg);
+    border: 1px solid #fff;
+}
+
+.square:hover .burgerwrap {
+    transform: rotate(-135deg)
+}
+
+.square span {
+    height: 2px;
+    width: 14px;
+    background: #9f7f5e;
+    display: block;
+    margin-bottom: 2px;
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.square span:after {
+    content: "";
+    height: 2px;
+    width: 14px;
+    position: absolute;
+    background: #fff;
+    left: -19px;
+    
+-webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+-moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+ -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+}
+
+.square:hover span {
+    margin-left: 26px;
+}
+
+.square:hover span:after {
+    left: 5px;
+}
+
+.square span:nth-of-type(1),
+.square span:nth-of-type(1):after {
+    transition-delay: 0.1s;
+}
+
+.square span:nth-of-type(2),
+.square span:nth-of-type(2):after {
+    transition-delay: 0.2s;
+}
+
+.square span:nth-of-type(3),
+.square span:nth-of-type(3):after {
+    transition-delay: 0.3s;
+}
+
+/*          LIQUID BUTTON            */
+
+.btn-liquid {
+	display: inline-block;
+	position: relative;
+	width: 240px;
+	height: 60px;
+
+	border-radius: 27px;
+
+	color: rgb(255, 255, 255);
+	font: 700 14px/60px "Droid Sans", sans-serif;
+	letter-spacing: 0.05em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.btn-liquid .inner {
+	position: relative;
+
+	z-index: 2;
+}
+
+.btn-liquid canvas {
+	position: absolute;
+	top: -50px;
+	right: -50px;
+	bottom: -50px;
+	left: -50px;
+
+	z-index: 1;
+}
+
+/*----------------- LOGIN CSS ---------------------*/

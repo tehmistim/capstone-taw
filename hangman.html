@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>UNIMATRIX 94866.2</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>94866.2 SUBCODE 855.36</h1>
+                <a href="home.html"><i class="fas fa-home"></i>Home</a>
+				<a href="profile.html"><i class="fas fa-user-circle"></i>Profile</a>
+				<a href="logout.html"><i class="fas fa-sign-out-alt"></i>Logout</a>
+			</div>
+		</nav>
+	</body>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/hangman.css">
+
+
+  <title>ZOMBIE-HANG</title>
+</head>
+<body>
+  <br>
+<div class="container">
+  <h1 class="text-center">Zombie-Hang</h1>
+  <div class="float-right">Wrong Guesses: <span id='mistakes'>0</span> of <span id='maxWrong'></span></div>
+  <div class="text-center">
+    <img id='hangmanPic' src="./images/0.png" alt="">
+    <p>Guess the Car Manufacturer:</p>
+    <p id="wordSpotlight">The word to be guessed goes here</p>
+    <div id="keyboard"></div>
+    <button class="btn btn-info" onClick="reset()">Reset</button>
+  </div> 
+</div>
+
+<script src='./js/hangman.js'></script>
+</body>
+</html>

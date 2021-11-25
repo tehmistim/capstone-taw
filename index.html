@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Unimatrix-Login</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="../js/script.js"></script>
+	</head>
+	<body>
+		<div class="login">
+			<h1>Welcome to Unimatrix 94866.2</h1>
+			<p align="center">a capstone project for Tim Washington</p>
+			<p align="center">in BrightPaths</p>
+			<br>
+			<div class="links">
+				<a href="/" class="active">Login</a>
+				<a href="register.html">Register</a>
+			</div>
+			<form class="ajax-form" action="/" method="post">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label id="rememberme">
+					<input type="checkbox" name="rememberme">Remember me
+				</label>
+				<!-- <div class="msg">optional message I am unsure of</div> -->
+				<input type="submit" value="Login">
+			</form>
+		</div>
+	</body>
+</html>
